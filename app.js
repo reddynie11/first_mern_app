@@ -9,4 +9,8 @@ app.use(express.static('views'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
+const indexRoute = require('./routes/index');
+
+app.use('/', indexRoute);
+
 app.listen(port);
