@@ -10,10 +10,10 @@ router.get('/', (req,res)=>{
 
 router.post('/', (req,res)=>{
     const fdata = new Index_m();
-    fdata.fname = req.body.fullname;
+    fdata.fname = req.body.fname;
     fdata.email = req.body.email;
-    fdata.address = req.body.add;
-    fdata.password = req.body.pwd;
+    fdata.address = req.body.address;
+    fdata.password = req.body.password;
     fdata.save((err)=>{
         if(err){throw err}
         else{res.send("data saved")}
